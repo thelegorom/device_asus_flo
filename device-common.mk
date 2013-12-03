@@ -177,6 +177,7 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     libqcomvoiceprocessing \
     libqcomvoiceprocessingdescriptors
+
 PRODUCT_COPY_FILES += \
     device/asus/flo/audio_effects.conf:system/vendor/etc/audio_effects.conf
 
@@ -240,7 +241,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 PRODUCT_PROPERTY_OVERRIDES += \
 	wifi.interface=wlan0 \
-	wifi.supplicant_scan_interval=15
+	wifi.supplicant_scan_interval=180 \
+    windowsmgr.max_events_per_sec=275
 
 # Enable AAC 5.1 output
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -257,7 +259,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
 	ro.qualcomm.cabl=1 \
 	hw.cabl.level=Auto \
 	persist.qcom.cabl.video_only=1
-
 
 # Configure libhwui
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -298,8 +299,6 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.nfc.hce.xml:system/etc/permissions/android.hardware.nfc.hce.xml \
     device/asus/flo/nfc/libnfc-brcm.conf:system/etc/libnfc-brcm.conf \
     device/asus/flo/nfc/libnfc-brcm-20791b05.conf:system/etc/libnfc-brcm-20791b05.conf
-
-PRODUCT_LOCALES := en_US es_US de_DE zh_CN
 
 $(call inherit-product, frameworks/native/build/tablet-7in-xhdpi-2048-dalvik-heap.mk)
 $(call inherit-product, hardware/qcom/msm8960/msm8960.mk)
