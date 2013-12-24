@@ -1,4 +1,3 @@
-
 #
 # Copyright (C) 2012 The CyanogenMod Project
 # Copyright (C) 2013 The LiquidSmooth Project
@@ -40,5 +39,5 @@ PRODUCT_BUILD_PROP_OVERRIDES += \
     PRODUCT_NAME=razor \
     TARGET_BUILD_TYPE=user \
     BUILD_VERSION_TAGS=release-keys \
-    PRIVATE_BUILD_DESC="razor-user 4.4 KRT16S 920375 release-keys" \
-    BUILD_FINGERPRINT="google/razor/flo:4.4/KRT16S/920375:user/release-keys"
+    PRIVATE_BUILD_DESC="razor-user 4.4.2 KOT49H 937116 release-keys" \
+    BUILD_FINGERPRINT="google/razor/flo:4.4.2/KOT49H/937116:user/release-keys"
