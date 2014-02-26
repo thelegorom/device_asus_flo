@@ -24,13 +24,6 @@ TARGET_ARCH_VARIANT := armv7-a-neon
 TARGET_CPU_VARIANT := krait
 ARCH_ARM_HAVE_TLS_REGISTER := true
 
-# QCOM enhancements
-#BOARD_USES_QCOM_HARDWARE := true
-#TARGET_USES_QCOM_BSP := true
-#COMMON_GLOBAL_CFLAGS += -DQCOM_HARDWARE -DQCOM_BSP
-#TARGET_QCOM_DISPLAY_VARIANT := caf
-#TARGET_QCOM_MEDIA_VARIANT := caf
-
 # Krait optimizations
 TARGET_USE_KRAIT_BIONIC_OPTIMIZATION := true
 TARGET_USE_KRAIT_PLD_SET := true
@@ -43,13 +36,13 @@ TARGET_NO_BOOTLOADER := true
 
 BOARD_KERNEL_BASE := 0x80200000
 BOARD_KERNEL_PAGESIZE := 2048
-# BOARD_KERNEL_CMDLINE := console=ttyHSL0,115200,n8 androidboot.hardware=msm8960 maxcpus=2
 BOARD_KERNEL_CMDLINE := console=ttyHSL0,115200,n8 androidboot.hardware=flo user_debug=31 msm_rtb.filter=0x3F ehci-hcd.park=3
 BOARD_MKBOOTIMG_ARGS := --ramdisk_offset 0x02000000
 
-# Try to build the kernel
+# kernel
 TARGET_KERNEL_SOURCE := kernel/google/msm
 TARGET_KERNEL_CONFIG := cyanogen_flo_defconfig
+TARGET_KERNEL_CUSTOM_TOOLCHAIN := arm-eabi-4.7
 
 BOARD_USES_ALSA_AUDIO:= true
 BOARD_USES_LEGACY_ALSA_AUDIO:= false
@@ -81,8 +74,6 @@ WIFI_DRIVER_FW_PATH_AP  := "ap"
 
 BOARD_EGL_CFG := device/asus/flo/egl.cfg
 
-#BOARD_USES_HGL := true
-#BOARD_USES_OVERLAY := true
 USE_OPENGL_RENDERER := true
 PRESENT_TIME_OFFSET_FROM_VSYNC_NS := 3200000
 TARGET_USES_ION := true
