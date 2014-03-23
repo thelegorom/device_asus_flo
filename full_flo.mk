@@ -13,12 +13,8 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 #
-PRODUCT_NAME := liquid_flo
-PRODUCT_DEVICE := flo
-PRODUCT_BRAND := Google
-PRODUCT_MODEL := Nexus 7
-PRODUCT_MANUFACTURER := Asus
-PRODUCT_RESTRICT_VENDOR_FILES := false
+$(call inherit-product, device/asus/flo/aosp_flo.mk)
 
-$(call inherit-product, device/asus/flo/device.mk)
+PRODUCT_NAME := full_flo
+
 $(call inherit-product-if-exists, vendor/asus/flo/flo-vendor.mk)
