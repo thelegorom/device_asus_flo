@@ -3,6 +3,6 @@
    "remote": "cm",
    "repository": "android_kernel_google_msm",
    "target_path": "kernel/google/msm",
-   "branch": "cm-11.0"
+   "revision": "cm-11.0"
  }
 ]
