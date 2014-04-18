@@ -1,14 +1,26 @@
 [
  {
-   "remote": "cm",
-   "repository": "android_kernel_google_msm",
-   "target_path": "kernel/google/msm",
-   "revision": "cm-11.0"
+   "remote": "sr",
+   "repository":  "proprietary_vendor_asus",
+   "target_path": "vendor/asus",
+   "branch":      "kk4.4"
  },
  {
-   "remote": "tm",
-   "repository": "proprietary_vendor_asus",
-   "target_path": "vendor/asus",
-   "revision": "cm-11.0"
+   "remote": "sr",
+   "repository":  "proprietary_vendor_broadcom",
+   "target_path": "vendor/broadcom",
+   "branch":      "kk4.4"
+ },
+ {
+   "remote": "sr",
+   "repository":  "proprietary_vendor_qcom",
+   "target_path": "vendor/qcom",
+   "branch":      "kk4.4"
+ },
+ {
+   "remote": "sr",
+   "repository":  "kernel_asus_flo",
+   "target_path": "kernel/asus/flo",
+   "branch":      "kk4.4"
  }
 ]

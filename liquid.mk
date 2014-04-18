@@ -17,13 +17,13 @@
 
 # boot
 TARGET_SCREEN_HEIGHT := 1920
-TARGET_SCREEN_WIDTH := 1080
-
-# device
-$(call inherit-product, device/asus/flo/full_flo.mk)
+TARGET_SCREEN_WIDTH := 1200
 
 # tablet
 $(call inherit-product, vendor/liquid/config/common_tablet.mk)
+
+# device
+$(call inherit-product, device/asus/flo/full_flo.mk)
 
 # product
 PRODUCT_DEVICE := flo
