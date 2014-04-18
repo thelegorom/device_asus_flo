@@ -1,6 +1,6 @@
 #
 # Copyright (C) 2012 The CyanogenMod Project
-# Copyright (C) 2013 The LiquidSmooth Project
+# Copyright (C) 2014 The LiquidSmooth Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -17,27 +17,28 @@
 
 # boot
 TARGET_SCREEN_HEIGHT := 1920
-TARGET_SCREEN_WIDTH := 1200
+TARGET_SCREEN_WIDTH  := 1080
 
-# tablet
+# Release name
+PRODUCT_RELEASE_NAME := flo
+
+# Inherit some common stuff.
 $(call inherit-product, vendor/liquid/config/common_tablet.mk)
 
-# device
+# Enhanced NFC
+$(call inherit-product, vendor/liquid/config/nfc_enhanced.mk)
+
+# Inherit device configuration
 $(call inherit-product, device/asus/flo/full_flo.mk)
 
-# product
+# Device identifier. This must come after all inclusions
 PRODUCT_DEVICE := flo
-PRODUCT_BRAND := Google
 PRODUCT_NAME := liquid_flo
+PRODUCT_BRAND := Google
 PRODUCT_MODEL := Nexus 7
 PRODUCT_MANUFACTURER := Asus
-PRODUCT_PROPERTY_OVERRIDES += ro.buildzipid=liquid.flo.$(shell date +%m%d%y).$(shell date +%H%M%S)
 
-# override
-PRODUCT_BUILD_PROP_OVERRIDES += \
-    BUILD_NUMBER=920375 \
-    PRODUCT_NAME=razor \
-    TARGET_BUILD_TYPE=user \
-    BUILD_VERSION_TAGS=release-keys \
-    PRIVATE_BUILD_DESC="razor-user 4.4.2 KOT49H 937116 release-keys" \
-    BUILD_FINGERPRINT="google/razor/flo:4.4.2/KOT49H/937116:user/release-keys"
+PRODUCT_RESTRICT_VENDOR_FILES := false
+
+#Set build fingerprint / ID / Product Name ect.
+PRODUCT_BUILD_PROP_OVERRIDES += PRODUCT_NAME=razor BUILD_FINGERPRINT="google/razor/flo:4.4.2/KOT49H/937116:user/release-keys" PRIVATE_BUILD_DESC="razor-user 4.4.2 KOT49H 937116 release-keys"

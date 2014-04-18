@@ -166,7 +166,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     libqcomvoiceprocessing \
     libqcomvoiceprocessingdescriptors
-
 PRODUCT_COPY_FILES += \
     device/asus/flo/audio_effects.conf:system/vendor/etc/audio_effects.conf
 
@@ -248,6 +247,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 	ro.qualcomm.cabl=1 \
 	hw.cabl.level=Auto \
 	persist.qcom.cabl.video_only=1
+
 
 # Configure libhwui
 PRODUCT_PROPERTY_OVERRIDES += \
