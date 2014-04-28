@@ -19,6 +19,12 @@
 TARGET_SCREEN_HEIGHT := 1920
 TARGET_SCREEN_WIDTH  := 1080
 
+#Needed for VOIP+SIP
+PRODUCT_PACKAGES := \
+    InCallUI \
+    Dialer \
+    rild
+
 # Release name
 PRODUCT_RELEASE_NAME := flo
 
