@@ -1,6 +1,6 @@
 #
 # Copyright (C) 2012 The CyanogenMod Project
-# Copyright (C) 2014 The LiquidSmooth Project
+# Copyright (C) 2014 The legoSmooth Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -29,17 +29,17 @@ PRODUCT_PACKAGES := \
 PRODUCT_RELEASE_NAME := flo
 
 # Inherit some common stuff.
-$(call inherit-product, vendor/liquid/config/common_tablet.mk)
+$(call inherit-product, vendor/lego/config/common_full_tablet_wifionly.mk)
 
 # Enhanced NFC
-$(call inherit-product, vendor/liquid/config/nfc_enhanced.mk)
+$(call inherit-product, vendor/lego/config/nfc_enhanced.mk)
 
 # Inherit device configuration
 $(call inherit-product, device/asus/flo/full_flo.mk)
 
 # Device identifier. This must come after all inclusions
 PRODUCT_DEVICE := flo
-PRODUCT_NAME := liquid_flo
+PRODUCT_NAME := lego_flo
 PRODUCT_BRAND := Google
 PRODUCT_MODEL := Nexus 7
 PRODUCT_MANUFACTURER := Asus
